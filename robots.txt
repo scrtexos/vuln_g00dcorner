@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /the_g00d_corner_admin_page/
