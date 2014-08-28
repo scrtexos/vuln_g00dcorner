@@ -43,7 +43,7 @@ if(user_exists($_POST['mail'])>0){
   $msg .= '* User already exists<br />';
 }
 
-if(isset($_FILES['avatar'])){
+if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){
   if($_FILES['avatar']['error'] > 0){
     $status = 'warning';
     $msg .= '* Avatar transfer failed<br />';   

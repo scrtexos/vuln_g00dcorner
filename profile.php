@@ -31,7 +31,7 @@ if(empty($_POST['address'])){
   $status = 'warning';
   $msg .= '* Empty Address<br />';
 }
-if(isset($_FILES['avatar'])){
+if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){
   if($_FILES['avatar']['error'] > 0){
     $status = 'warning';
     $msg .= '* Avatar transfer failed<br />';   
